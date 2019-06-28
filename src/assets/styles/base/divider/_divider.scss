@@ -1,0 +1,15 @@
+// Styles written by Jacob Bearce @ https://jacob.rocks/
+
+/* ------------------------------------------------------------------------ *\
+ * Divider
+\* ------------------------------------------------------------------------ */
+
+.divider {
+    & {
+        background: var(--foreground-base);
+        border: 0;
+        height: remify(5, 16);
+        margin: remify($content-padding 0);
+        opacity: 0.125;
+    }
+}

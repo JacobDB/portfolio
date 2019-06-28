@@ -1,0 +1,12 @@
+// Styles written by Jacob Bearce @ https://jacob.rocks/
+
+/* ------------------------------------------------------------------------ *\
+ * Text
+\* ------------------------------------------------------------------------ */
+
+::selection {
+    & {
+        background-color: var(--accent-base);
+        color: var(--light-base);
+    }
+}

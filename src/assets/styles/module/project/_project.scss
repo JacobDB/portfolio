@@ -1,0 +1,42 @@
+// Styles written by Jacob Bearce @ https://jacob.rocks/
+
+/* ------------------------------------------------------------------------ *\
+ * Project
+\* ------------------------------------------------------------------------ */
+
+.project {
+    & {
+        background: var(--background-base);
+        box-shadow: remify(0 4 4, 16) rgba(0, 0, 0, 0.125);
+    }
+}
+
+.project__figure {
+    & {
+        margin: 0;
+    }
+}
+
+.project__image {
+    & {
+        display: block;
+        width: 100%;
+    }
+}
+
+.project__title {
+    .title__link {
+        color: inherit;
+    }
+
+    .title__link:focus,
+    .title__link:hover {
+        color: var(--accent-base);
+    }
+}
+
+.project__content {
+    & {
+        padding: remify($content-padding);
+    }
+}

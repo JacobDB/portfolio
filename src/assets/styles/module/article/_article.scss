@@ -1,0 +1,38 @@
+// Styles written by Jacob Bearce @ https://jacob.rocks/
+
+/* ------------------------------------------------------------------------ *\
+ * Article
+\* ------------------------------------------------------------------------ */
+
+.article {
+    & + & {
+        border-top: 1px dotted var(--foreground-tint);
+        margin-top: remify($content-padding * 0.5);
+        padding-top: remify($content-padding * 0.5);
+    }
+}
+
+.article__link {
+    & {
+        color: var(--foreground-base);
+    }
+
+    &:focus,
+    &:hover {
+        color: var(--accent-base);
+    }
+}
+
+.article__title {
+    & {
+        color: inherit;
+        font-size: remify(18, 16);
+        margin: remify(0 0 4, 18);
+    }
+}
+
+.article__meta-list {
+    & {
+        color: inherit !important;
+    }
+}

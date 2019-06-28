@@ -1,0 +1,126 @@
+// Styles written by Jacob Bearce @ https://jacob.rocks/
+
+/* ------------------------------------------------------------------------ *\
+ * Mixins
+\* ------------------------------------------------------------------------ */
+
+// nth-child: https://paulund.co.uk/nth-child-sass-mixins
+
+@mixin first-child() {
+    &:first-of-type {
+        @content;
+    }
+}
+
+@mixin last-child() {
+    &:last-of-type {
+        @content;
+    }
+}
+
+@mixin even() {
+    &:nth-child(even) {
+        @content;
+    }
+}
+
+@mixin odd() {
+    &:nth-child(odd) {
+        @content;
+    }
+}
+
+@mixin first($num) {
+    @if $num == 1 {
+        &:first-child {
+            @content;
+        }
+    }
+
+    @else {
+        &:nth-child(-n + #{$num}) {
+            @content;
+        }
+    }
+}
+
+@mixin last($num) {
+    &:nth-last-child(-n + #{$num}) {
+        @content;
+    }
+}
+
+@mixin after($num) {
+    &:nth-child(n+#{$num + 1}) {
+        @content;
+    }
+}
+
+@mixin from-end($num) {
+    &:nth-last-child(#{$num}) {
+        @content;
+    }
+}
+
+@mixin between($first,$last) {
+    &:nth-child(n+#{$first}):nth-child(-n+#{$last}) {
+        @content;
+    }
+}
+
+@mixin all-but($num) {
+    &:not(:nth-child(#{$num})) {
+        @content;
+    }
+}
+
+@mixin each($num) {
+    &:nth-child(#{$num}n) {
+        @content;
+    }
+}
+
+// layers
+
+@mixin layer($layer-name) {
+    position: relative;
+    z-index: map-get($layers, $layer-name);
+}
+
+// Scale dynaimcally until a given viewport
+
+@mixin viewport-scale($size: 16, $base: 1024, $min-width: 0, $max-width: null) {
+    $max-width: if($max-width == null, $base, $max-width);
+
+    @media screen and (min-width: remify($min-width, 16)) and (max-width: remify($max-width, 16)) {
+        font-size: ($size / $base) * 100vw;
+    }
+}
+
+// Create a media query relatie to a break point variable
+
+@mixin smaller-than($width, $inclusive: false) {
+    $width: $width * 1em;
+
+    @if $inclusive == false {
+        $width: $width - (1 / 16);
+    }
+
+    @media (max-width: $width) {
+        @content;
+    }
+}
+
+// Create a media query relatie to a break point variable
+
+@mixin larger-than($width, $inclusive: true) {
+    $width: $width * 1em;
+
+    @if $inclusive == false {
+        $width: $width + (1 / 16);
+    }
+
+    @media (min-width: $width) {
+        @content;
+    }
+}

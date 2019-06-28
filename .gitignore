@@ -1,0 +1,45 @@
+# https://git-scm.com/docs/gitignore
+
+# Package Managers
+/bower_components/
+/node_modules/
+/vendor/
+
+# Resources
+/.resources/
+
+# Configuration settings
+/.config/
+
+# VS Code settings
+/.vscode/
+
+# Server files
+/.public_html/
+
+# Dev files
+/dev/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Windows folder config file
+Desktop.ini
+
+# Windows Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Mac crap
+.DS_Store
+
+# Prepros
+prepros.cfg
+prepros-6.cfg
+
+# Source Maps
+*.css.map
+*.js.map
+
+# Log files
+*.log

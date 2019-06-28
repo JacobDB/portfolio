@@ -1,0 +1,39 @@
+// Styles written by Jacob Bearce @ https://jacob.rocks/
+
+/* ------------------------------------------------------------------------ *\
+ * Icon List
+\* ------------------------------------------------------------------------ */
+
+.icon-list {
+    & {
+        font-size: remify(32, 16);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    @include smaller-than($l-break) {
+        text-align: center;
+    }
+}
+
+.icon-list__item {
+    & {
+        display: inline;
+    }
+
+    & + & {
+        margin-left: remify(16, 32);
+    }
+}
+
+.icon-list__link {
+    & {
+        color: var(--foreground-base);
+    }
+
+    &:focus,
+    &:hover {
+        color: var(--accent-base);
+    }
+}

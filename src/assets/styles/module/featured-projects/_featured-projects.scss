@@ -1,0 +1,14 @@
+// Styles written by Jacob Bearce @ https://jacob.rocks/
+
+/* ------------------------------------------------------------------------ *\
+ * Featured Projects
+\* ------------------------------------------------------------------------ */
+
+.featured-projects {
+    & {
+        display: grid;
+        grid-gap: remify($column-gap, 16);
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: remify($content-padding, 16);
+    }
+}

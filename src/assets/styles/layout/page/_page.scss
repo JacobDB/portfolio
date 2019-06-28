@@ -1,0 +1,31 @@
+// Styles written by Jacob Bearce @ https://jacob.rocks/
+
+/* ------------------------------------------------------------------------ *\
+ * Page
+\* ------------------------------------------------------------------------ */
+
+html,
+body {
+    & {
+        background: var(--page-background-base);
+        min-height: 100vh;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        width: 100%;
+    }
+}
+
+body {
+    & {
+        overflow-x: hidden;
+    }
+}
+
+.page__container {
+    & {
+        background: var(--background);
+        margin: 0 auto;
+        max-width: remify(750, 16);
+        padding: remify(($content-padding * 1.5) $content-padding);
+    }
+}

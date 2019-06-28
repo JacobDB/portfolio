@@ -1,0 +1,33 @@
+// Styles written by Jacob Bearce @ https://jacob.rocks/
+
+/* ------------------------------------------------------------------------ *\
+ * Link
+\* ------------------------------------------------------------------------ */
+
+.link {
+    & {
+        color: var(--accent-base);
+        cursor: pointer;
+        text-decoration: none;
+        transition: color 0.15s;
+    }
+
+    &:focus,
+    &:hover {
+        color: var(--accent-tint);
+    }
+}
+
+/* inherit variant */
+
+.link--inherit {
+    & {
+        color: inherit;
+    }
+
+    &:focus,
+    &:hover {
+        color: inherit;
+        text-decoration: underline;
+    }
+}

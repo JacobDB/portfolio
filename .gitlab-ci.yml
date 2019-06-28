@@ -1,0 +1,23 @@
+image: jacob9230/linter
+
+code_quality:
+  stage: test
+  before_script:
+    - npm install --no-package-lock --no-save --quiet stylelint stylelint-config-standard stylelint-order stylelint-scss
+    - node -v
+    - npm -v
+    - php -v
+  script:
+    - stylelint "./src/assets/styles/**/*.scss"
+    - eslint "./src/assets/scripts/**/*.js"
+    - phplint "./src"
+
+deploy:
+  stage: deploy
+  script:
+    - "wget --quiet --output-document=- --content-on-error --header=\"Content-Type: application/json\" --post-data='{\"ref\":\"refs/heads/'$CI_COMMIT_REF_NAME'\"}' $CI_ENVIRONMENT_URL'.gitlab/deploy.php?token='$TOKEN'&sha='$CI_COMMIT_SHA'&reset=true'"
+  environment:
+    name: Production
+  when: manual
+  only:
+  - master

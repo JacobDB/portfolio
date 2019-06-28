@@ -1,0 +1,19 @@
+// Styles written by Jacob Bearce @ https://jacob.rocks/
+
+/* ------------------------------------------------------------------------ *\
+ * Helpers
+\* ------------------------------------------------------------------------ */
+
+// imports
+
+@import "_mixins";
+@import "_functions";
+@import "_variables";
+
+// generic helpers
+
+.__visuallyhidden {
+    left: -999em !important;
+    position: absolute !important;
+    top: -999em !important;
+}

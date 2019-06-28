@@ -1,0 +1,56 @@
+// Styles written by Jacob Bearce @ https://jacob.rocks/
+
+/* ------------------------------------------------------------------------ *\
+ * Normalize
+\* ------------------------------------------------------------------------ */
+
+/* stylelint-disable property-no-vendor-prefix, selector-max-type, selector-no-qualifying-type */
+
+/* These styles are intended to be global */
+
+// Vendor
+
+@import "normalize-scss/sass/normalize/_import-now";
+
+// Custom
+
+//  Change the box-sizing of all elements
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+// remove opinionated default styles on buttons, inputs, and selects
+
+button,
+input,
+select,
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+// be extra specific for search fields, as normalize resets them
+
+[type="search"] {
+    -webkit-appearance: none;
+}
+
+// Set max-height and max-width to 100% on SVGs to fix a bug in Safari (http://stackoverflow.com/a/12631326/654480)
+
+svg {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+// Hide outline on focus
+
+/* Remove outline for non-keyboard :focus */
+*:focus:not(.focus-visible) {
+    outline: none;
+}

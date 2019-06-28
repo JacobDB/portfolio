@@ -1,0 +1,80 @@
+// Styles written by Jacob Bearce @ https://jacob.rocks/
+
+/* ------------------------------------------------------------------------ *\
+ * Colors
+\* ------------------------------------------------------------------------ */
+
+:root {
+    & {
+        --primary-tint: #448AFF;
+        --primary-base: #005ECB;
+        --primary-shade: #002E53;
+        --accent-tint: #448AFF;
+        --accent-base: #005ECB;
+        --accent-shade: #002E53;
+        --foreground-tint: #393F4C;
+        --foreground-base: #24292E;
+        --foreground-shade: #303014;
+        --background-tint: #FFFFFF;
+        --background-base: #FFFFFF;
+        --background-shade: #F6F8FA;
+        --page-background-tint: #FFFFFF;
+        --page-background-base: #F6F8FA;
+        --page-background-shade: #F9F9E9;
+        --light-tint: #FFFFFF;
+        --light-base: #FFFFFF;
+        --light-shade: #F6F8FA;
+        --dark-tint: #24292E;
+        --dark-base: #000000;
+        --dark-shade: #000000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        --primary-tint: #BCCFFF;
+        --primary-base: #448AFF;
+        --primary-shade: #005ECB;
+        --accent-tint: #BCCFFF;
+        --accent-base: #448AFF;
+        --accent-shade: #005ECB;
+        --foreground-tint: #FFFFFF;
+        --foreground-base: #FFFFFF;
+        --foreground-shade: #F6F8FA;
+        --background-tint: #4D516B;
+        --background-base: #393F4C;
+        --background-shade: #24292E;
+        --page-background-tint: #393F4C;
+        --page-background-base: #24292E;
+        --page-background-shade: #0E1011;
+    }
+}
+
+/* ------------------------------------------------------------------------ *\
+ * Fonts                                                                    *
+\* ------------------------------------------------------------------------ */
+
+$heading-font: "Georgia", "Times", "Times New Roman", serif;
+$body-font: "Georgia", "Times", "Times New Roman", serif;
+
+/* ------------------------------------------------------------------------ *\
+ * Widths                                                                   *
+\* ------------------------------------------------------------------------ */
+
+$site-width: 750;
+$column-gap: 30;
+$content-padding: 25;
+
+/* ------------------------------------------------------------------------ *\
+ * Break Points                                                             *
+\* ------------------------------------------------------------------------ */
+
+$l-break: 480 / 16;
+
+/* ------------------------------------------------------------------------ *\
+ * Layers                                                                   *
+\* ------------------------------------------------------------------------ */
+
+$layers: (
+    header: 3,
+    content: 2,
+    footer: 1,
+);
