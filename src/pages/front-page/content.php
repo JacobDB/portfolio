@@ -104,39 +104,45 @@ $posts    = json_decode(file_get_contents("https://dev.to/api/articles?username=
                 <?php foreach ($posts as $post): ?>
                     <article class="content__article article">
                         <header class="article__header">
-                            <a class="article__link link" href="<?php echo $post->url; ?>" rel="noopener" target="_blank">
 
-                                <h3 class="article__title title title--h3">
+                            <h3 class="article__title title title--h3">
+                                <a class="title__link link" href="<?php echo $post->url; ?>" rel="noopener" target="_blank">
                                     <?php echo $post->title; ?>
-                                </h3>
+                                </a>
+                            </h3>
 
-                                <ul class="article__meta-list meta-list">
+                            <ul class="article__meta-list meta-list">
 
-                                    <?php $date = new DateTime($post->published_at); ?>
+                                <?php $date = new DateTime($post->published_at); ?>
 
-                                    <li class="meta-list__item">
+                                <li class="meta-list__item">
+                                    <a class="meta-list__link link" href="<?php echo $post->url; ?>" rel="noopener" target="_blank">
                                         <time datetime="<?php echo $date->format("c"); ?>">
                                             <i class="meta-list__icon fas fa-clock"></i>
                                             <span class="__visuallyhidden">Posted on</span>
                                             <?php echo $date->format("M j Y"); ?>
                                         </time>
-                                    </li>
+                                    </a>
+                                </li>
 
-                                    <li class="meta-list__item">
+                                <li class="meta-list__item">
+                                    <a class="meta-list__link link" href="<?php echo $post->url; ?>#reaction-butt-like" rel="noopener" target="_blank">
                                         <i class="meta-list__icon fas fa-heart"></i>
                                         <?php echo $post->positive_reactions_count; ?>
                                         <span class="__visuallyhidden">Likes</span>
-                                    </li>
+                                    </a>
+                                </li>
 
-                                    <li class="meta-list__item">
+                                <li class="meta-list__item">
+                                    <a class="meta-list__link link" href="<?php echo $post->url; ?>#comments" rel="noopener" target="_blank">
                                         <i class="meta-list__icon fas fa-comment"></i>
                                         <?php echo $post->comments_count; ?>
                                         <span class="__visuallyhidden">Comments</span>
-                                    </li>
+                                    </a>
+                                </li>
 
-                                </ul><!--/.article__meta-list-->
+                            </ul><!--/.article__meta-list-->
 
-                            </a><!--/.article__link-->
                         </header><!--/.article__header-->
                     </article><!--/.content__article-->
                 <?php endforeach; //($posts as $post) ?>

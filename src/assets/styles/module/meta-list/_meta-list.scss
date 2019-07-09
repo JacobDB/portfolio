@@ -26,3 +26,14 @@
         margin-left: remify(14, 14);
     }
 }
+
+.meta-list__link {
+    & {
+        color: var(--foreground-base);
+    }
+
+    &:focus,
+    &:hover {
+        color: var(--accent-base);
+    }
+}
