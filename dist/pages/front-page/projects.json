@@ -1,0 +1,46 @@
+[
+    {
+        "image": {
+            "alt": "Bartlett Park District",
+            "src": {
+                "1x": "\/assets\/media\/projects\/bartlett-park-district.jpg",
+                "2x": "\/assets\/media\/projects\/bartlett-park-district@2x.jpg",
+                "3x": "\/assets\/media\/projects\/bartlett-park-district@3x.jpg"
+            }
+        },
+        "title": "Bartlett Park District",
+        "description": "BPD is a large park district website, complete with several &quot;child&quot; sites each with its own custom theme. These child themes where created using a combination of CSS variables and minor PHP customizations for each variation. I used this build as an opportunity to explore the speed improvements made possible by http2, as well as creating a truely app-like website, complete with restricted selection areas, slide out menu, and custom tap highlight colors.",
+        "link": {
+            "target": "_blank",
+            "title": "Visit Site →",
+            "url": "https:\/\/bartlettparks.org\/"
+        },
+        "tags": [
+            "custom properties",
+            "http2",
+            "micro interactions"
+        ]
+    },
+    {
+        "image": {
+            "alt": "786 Club",
+            "src": {
+                "1x": "\/assets\/media\/projects\/786-club.jpg",
+                "2x": "\/assets\/media\/projects\/786-club@2x.jpg",
+                "3x": "\/assets\/media\/projects\/786-club@3x.jpg"
+            }
+        },
+        "title": "786 Club",
+        "description": "The 786 Club is a civilian support crew for the US Navy&apos;s USS Illinois submarine. The split navigation system made it difficult to keep everything correctly centered, but with a bit of flexbox magic, everything lines up perfectly. This site uses WooCommerce with quite a bit of custom logic behind-the-scenes to calculate membership dues, expiration dates, and more. Be sure to check out the member&apos;s login screen to get a sense of what it might be like looking through a porthole aboard the USS Illinois.",
+        "link": {
+            "target": "_blank",
+            "title": "Visit Site →",
+            "url": "https:\/\/www.786club.org\/"
+        },
+        "tags": [
+            "custom login",
+            "paid user registration",
+            "split navigation"
+        ]
+    }
+]
