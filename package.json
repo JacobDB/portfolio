@@ -64,6 +64,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
     "@fortawesome/pro-solid-svg-icons": "^5.9.0",
+    "favicon-mode-switcher": "^1.1.0",
     "focus-visible": "^5.0.1",
     "normalize-scss": "^7.0.1",
     "sw-toolbox": "^3.6.0"
