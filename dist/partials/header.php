@@ -47,7 +47,7 @@
 
                         <p class="header__text text">I'm a Chicago-based front-end developer with over 10 years of experience working with varying platforms. I specialize in fully custom, accessible, and highly performant WordPress themes, with a focus on progressive web app features.</p>
 
-                        <p class="header__text text">Currently Lead Developer at <a class="text__link link" href="https://www.weblinxinc.com/" rel="noopener" target="_blank">Weblinx, Inc.</a></p>
+                        <p class="header__text text">Lead Developer at <a class="text__link link" href="https://www.weblinxinc.com/" rel="noopener" target="_blank">Weblinx, Inc.</a></p>
 
                         <nav class="header__icon-list__container icon-list__container">
                             <?php include("partials/icon-list.php"); ?>
