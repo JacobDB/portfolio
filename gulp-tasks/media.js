@@ -23,7 +23,7 @@ module.exports = {
                 .pipe(gulp.dest(`${MEDIA_DIRECTORY}/assets/media/fonts`));
 
             // process images
-            const PROCESS_IMAGES = gulp.src(`${global.settings.paths.src}/**/*.{jpg,png,svg,webp}`)
+            const PROCESS_IMAGES = gulp.src(`${global.settings.paths.src}/**/*.{gif,jpg,png,svg,webp}`)
                 // prevent breaking on error
                 .pipe(plugins.plumber({ errorHandler: on_error }))
                 // check if source is newer than destination
@@ -43,7 +43,7 @@ module.exports = {
                 // output to compiled directory
                 .pipe(gulp.dest(MEDIA_DIRECTORY));
 
-            // process images
+            // generate .webp images
             const GENERATE_WEBP = gulp.src(`${global.settings.paths.src}/**/*.{jpg,png}`)
                 // prevent breaking on error
                 .pipe(plugins.plumber({ errorHandler: on_error }))

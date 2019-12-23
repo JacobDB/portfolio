@@ -5,12 +5,13 @@
 module.exports = {
     styles(gulp, plugins, custom_notifier, ran_tasks, on_error) {
         // task-specific plugins
-        const CSS_IMPORTER = require("node-sass-simple-css-importer");
         const HASH         = require("gulp-hash");
         const POSTCSS      = require("gulp-postcss");
         const SASS         = require("gulp-sass");
         const STYLELINT    = require("gulp-stylelint");
         const TOUCH        = require("gulp-touch-fd");
+
+        SASS.compiler = require("sass");
 
         const CHECK_IF_NEWER = (source = `${global.settings.paths.src}/assets/styles/**/*.scss`, folder_name = `${global.settings.paths.dev}/assets/styles/`, master_files = []) => {
             /**
@@ -113,9 +114,8 @@ module.exports = {
                     .pipe(plugins.sourcemaps.init())
                     // compile SCSS (compress if --dist is passed)
                     .pipe(SASS({
-                        importer: CSS_IMPORTER(),
                         includePaths: "node_modules",
-                        outputStyle: plugins.argv.dist ? "compressed" : "nested",
+                        outputStyle: plugins.argv.dist ? "compressed" : "expanded",
                     }))
                     // process post CSS stuff
                     .pipe(POSTCSS([
